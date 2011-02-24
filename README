@@ -20,4 +20,8 @@ highlight -l -A SOURCE_FILE  | less -R
 find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' | xargs grep 'MY_STRING'
 # open files in editor which string match in files
 gedit `find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' | xargs grep 'MY_STRING' | awk -F: '{print $1}'`
+# open files in editor which string match in files
+find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' -exec perl -pi -e 's/MY_ORIG_STRING/MY_REPLACED_STRING/' {} \;
+# replace string in files which strings match in files
+find . -ipath './merlin-data/src/*/*.xml' -exec perl -pi -e 's/http:\/\/hibernate.sourceforge.net\//http:\/\/www.hibernate.org\/dtd\//' {} \;
 
