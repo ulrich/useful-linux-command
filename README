@@ -14,3 +14,5 @@ find . -name MY_FILE_PATTERN | xargs grep 'MY_STRING'
 find . -name "MY_FILE_PATTERN" -exec grep -l MY_STRING {} \;
 # find string in file and give, with, before each file name, the number of time the MY_STRING appears in the file
 find . -name "MY_FILE_PATTERN" | xargs grep 'MY_STRING' | awk -F: '{print $1}' | uniq -c
+# less on a source file with syntax highlighting (need highlight : http://www.andre-simon.de/doku/highlight/en/highlight.html)
+highlight -l -A SOURCE_FILE  | less -R
