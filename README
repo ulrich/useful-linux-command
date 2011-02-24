@@ -18,4 +18,6 @@ find . -name "MY_FILE_PATTERN" | xargs grep 'MY_STRING' | awk -F: '{print $1}' |
 highlight -l -A SOURCE_FILE  | less -R
 # find string in specified path and file pattern
 find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' | xargs grep 'MY_STRING'
+# open files in editor which string match in files
+gedit `find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' | xargs grep 'MY_STRING' | awk -F: '{print $1}'`
 
