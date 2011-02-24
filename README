@@ -1,0 +1,3 @@
+# find string in file
+find . -name MY_FILE | xargs grep 'MY_STRING'
+
