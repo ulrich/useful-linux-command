@@ -1,3 +1,12 @@
-# find string in file
-find . -name MY_FILE | xargs grep 'MY_STRING'
+------------------------------------------------
+You can add any commands or improve existing one
+However, you must follow the current pattern is:
 
+# THE_LINUX_COMMAND_EXPLANATION
+THE_LINUX_COMMAND_1
+THE_LINUX_COMMAND_2
+...
+------------------------------------------------
+
+# find string in file
+find . -name MY_FILE_PATTERN | xargs grep 'MY_STRING'
