@@ -10,9 +10,12 @@ THE_LINUX_COMMAND_2
 
 # find string in file
 find . -name MY_FILE_PATTERN | xargs grep 'MY_STRING'
-# Same as above, but just with the file name
+# same as above, but just with the file name
 find . -name "MY_FILE_PATTERN" -exec grep -l MY_STRING {} \;
 # find string in file and give, with, before each file name, the number of time the MY_STRING appears in the file
 find . -name "MY_FILE_PATTERN" | xargs grep 'MY_STRING' | awk -F: '{print $1}' | uniq -c
 # less on a source file with syntax highlighting (need highlight : http://www.andre-simon.de/doku/highlight/en/highlight.html)
 highlight -l -A SOURCE_FILE  | less -R
+# find string in specified path and file pattern
+find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' | xargs grep 'MY_STRING'
+
