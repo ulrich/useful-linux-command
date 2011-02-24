@@ -10,3 +10,7 @@ THE_LINUX_COMMAND_2
 
 # find string in file
 find . -name MY_FILE_PATTERN | xargs grep 'MY_STRING'
+# Same as above, but just with the file name
+find . -name "MY_FILE_PATTERN" -exec grep -l MY_STRING {} \;
+# find string in file and give, with, before each file name, the number of time the MY_STRING appears in the file
+find . -name "MY_FILE_PATTERN" | xargs grep 'MY_STRING' | awk -F: '{print $1}' | uniq -c
