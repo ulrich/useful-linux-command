@@ -25,3 +25,17 @@ find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' -exec perl -pi -e 's/MY_O
 # replace string in files which strings match in files
 find . -ipath './merlin-data/src/*/*.xml' -exec perl -pi -e 's/http:\/\/hibernate.sourceforge.net\//http:\/\/www.hibernate.org\/dtd\//' {} \;
 
+# delete files recursively
+$ find . -name .DS_Store -delete
+
+# erase a CDRW
+sudo cdrecord blank=all -immed dev=/dev/cdrw
+
+# extract audio from a video (without reencoding it)
+ffmpeg -i mandelbrot.flv -vn -acodec copy mandelbrot.mp3
+
+# display a desktop notification
+notify-send "Title" "This is a message"
+
+# When the system's freezed :
+Keep Left Alt & Print Screen pressed, then R, S, E, I, U, B
