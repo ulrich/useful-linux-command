@@ -39,3 +39,6 @@ notify-send "Title" "This is a message"
 
 # When the system's freezed :
 Keep Left Alt & Print Screen pressed, then R, S, E, I, U, B
+
+# Find broken symlinks in a specified directory
+for i in `find MY_DIRECTORY -type l`; do [ -e $i ] || echo $i is broken; done
