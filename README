@@ -8,6 +8,9 @@ THE_LINUX_COMMAND_2
 ...
 ------------------------------------------------
 
+find relatives
+==============
+
 # find string in file
 find . -name MY_FILE_PATTERN | xargs grep 'MY_STRING'
 # same as above, but just with the file name
@@ -28,17 +31,32 @@ find . -ipath './merlin-data/src/*/*.xml' -exec perl -pi -e 's/http:\/\/hibernat
 # delete files recursively
 $ find . -name .DS_Store -delete
 
+media relatives
+===============
+
 # erase a CDRW
 sudo cdrecord blank=all -immed dev=/dev/cdrw
 
+# mount an Iso file
+mount -o loop -t iso9660 file.iso /media/iso
+
 # extract audio from a video (without reencoding it)
 ffmpeg -i mandelbrot.flv -vn -acodec copy mandelbrot.mp3
+
+system relatives
+================
 
 # display a desktop notification
 notify-send "Title" "This is a message"
 
 # When the system's freezed :
-Keep Left Alt & Print Screen pressed, then R, S, E, I, U, B
+Keep Left Alt & Print Screen pressed, then R, S, E, I, U, B (Raising a Skinny Elephant Is Utterly Boring)
 
 # Find broken symlinks in a specified directory
 for i in `find MY_DIRECTORY -type l`; do [ -e $i ] || echo $i is broken; done
+
+simply commands
+===============
+
+# kill a process by its window
+xkill #And squeeze the trigger
