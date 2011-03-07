@@ -43,6 +43,21 @@ mount -o loop -t iso9660 file.iso /media/iso
 # extract audio from a video (without reencoding it)
 ffmpeg -i mandelbrot.flv -vn -acodec copy mandelbrot.mp3
 
+Bash relatives
+=============
+
+# Delete last word from command line
+CTRL + W 
+
+# Delate current line from command line
+CTRL + U
+
+# Logout current terminal
+CTRL + D
+
+# Recursive search
+CTRL + R
+
 system relatives
 ================
 
