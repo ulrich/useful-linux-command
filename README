@@ -34,6 +34,10 @@ perl -p -i -e 's/relativePath>../relativePath>..\/../g' `find ./ -name pom.xml`
 # delete files recursively
 $ find . -name .DS_Store -delete
 
+#Find all those pesky files above 20mb
+find . -size +20000k -exec du -h {} \;
+
+
 media relatives
 ===============
 
