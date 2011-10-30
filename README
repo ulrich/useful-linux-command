@@ -28,7 +28,7 @@ find . -ipath './MY_DIRECTORY/FOOBAR/*/*.MY_EXTENSION' -exec perl -pi -e 's/MY_O
 
 # replace string in files which strings match in files
 find . -ipath './merlin-data/src/*/*.xml' -exec perl -pi -e 's/http:\/\/hibernate.sourceforge.net\//http:\/\/www.hibernate.org\/dtd\//' {} \;
-# Another way to replace string in files 
+# Another way to replace string in files
 perl -p -i -e 's/relativePath>../relativePath>..\/../g' `find ./ -name pom.xml`
 
 # delete files recursively
@@ -54,7 +54,7 @@ Bash relatives
 =============
 
 # Delete last word from command line
-CTRL + W 
+CTRL + W
 
 # Delate current line from command line
 CTRL + U
