@@ -8,7 +8,7 @@ THE_LINUX_COMMAND_2
 ...
 ------------------------------------------------
 
-find relatives
+Find relatives
 ==============
 
 # find string in file
@@ -68,7 +68,10 @@ CTRL + R
 # Clear screen
 CTRL + L
 
-system relatives
+# Change under ubuntu the default color of directory that is other-writable (o+w) and not sticky, see: http://www.bigsoft.co.uk/blog/index.php/2008/04/11/configuring-ls_colors
+echo "OTHER_WRITABLE 01;34" > ~/.dircolors
+
+System relatives
 ================
 
 # display a desktop notification
@@ -83,8 +86,9 @@ for i in `find MY_DIRECTORY -type l`; do [ -e $i ] || echo $i is broken; done
 # Get BIOS version
 sudo dmidecode -s bios-version
 
-simply commands
+Simply commands
 ===============
 
 # kill a process by its window
 xkill #And squeeze the trigger
+
