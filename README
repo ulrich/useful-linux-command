@@ -92,3 +92,8 @@ Simply commands
 # kill a process by its window
 xkill #And squeeze the trigger
 
+Display relatives
+================
+
+# Send display to specific output
+xrandr --output HDMI1 --right-of LVDS1
